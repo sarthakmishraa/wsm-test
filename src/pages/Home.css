@@ -1,0 +1,248 @@
+.Home {
+    padding-left: 250px;
+    padding-right: 250px;
+}
+
+.OfferComponent {
+    background-color: gainsboro;
+    color: black;
+    text-align: center;
+    padding: 20px;
+    font-size: x-large;
+}
+
+.FirstViewComponent {
+    /* padding-left: 250px; */
+    padding-right: 700px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    overflow: hidden;
+}
+
+.FirstViewComponent img{
+    opacity: 0.5;
+    transform: scale(1.2);
+    width: 200% !important;
+}
+
+.FirstViewComponent p{
+    font-weight: bold;
+    font-size: 80px;
+}
+
+.FirstViewComponent h4 {
+    font-size: 40px;
+    color: gray;
+}
+
+.FirstViewComponent img {
+    width: 100px;
+}
+
+.HomeDetails {
+    padding-left: 250px;
+    padding-right: 250px;
+    font-size: larger;
+}
+
+.ConverterDetails,.ConverterDetailsWithBG {
+    padding-left: 250px;
+    padding-right: 250px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: black;
+    color: white;
+    font-size: larger;
+
+}
+
+.ConverterDetails h2, .ConverterDetailsWithBG h2{
+    color: orange;
+}
+
+.ConverterDetailsWithBG {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.6)), url('../media/bg-image.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.ConverterImages {
+    padding-left: 250px;
+    padding-right: 250px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.ConverterImage {
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    background-color: black;
+    position: relative;
+    display: inline-block;
+}
+
+.ConverterImage img {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(214, 214, 214, 0.2));
+    padding: 20px;
+    width: 250px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ConverterImage:hover img {
+    opacity: 0.5;
+}
+
+.ConverterImageText {
+    transition: .5s ease;
+    opacity: 0;
+    color: white;
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    overflow: hidden;
+    padding-bottom: 30px;
+}
+
+.inline {
+    display: inline;
+    margin-right: 10px;
+}
+
+.ConverterImageText h3:first-child{
+    color: orange;
+}
+
+.ConverterImage:hover .ConverterImageText {
+    opacity: 1;
+}
+
+.ConverterSpecs {
+    padding-left: 250px;
+    padding-right: 250px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(0, 0, 0, 0.2));
+    background-position: center;
+    background-size: cover;
+}
+
+.ConverterSpecsContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ConverterSpecs img {
+    width: 500px;
+}
+
+.ConverterSpecsHeading {
+    font-size: 50px;
+    color: gray;
+    text-align: center;
+}
+
+.ConverterSpecsInfoChild {
+    border-bottom: 8px solid orange;
+}
+
+.ConverterSpecsInfoChild h4 {
+    color: lightslategray;
+    font-size: x-large;
+}
+
+@media (max-width: 1200px) {
+    .Home, .HomeDetails, .ConverterDetails, .ConverterDetailsWithBG, .ConverterImages, .ConverterSpecs {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+    
+    .FirstViewComponent {
+        padding-right: 100px;
+    }
+    
+    .FirstViewComponent p {
+        font-size: 60px;
+    }
+    
+    .FirstViewComponent h4 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .Home, .HomeDetails, .ConverterDetails, .ConverterDetailsWithBG, .ConverterImages, .ConverterSpecs {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    
+    .FirstViewComponent {
+        flex-direction: column;
+        padding-right: 50px;
+    }
+    
+    .FirstViewComponent p {
+        font-size: 40px;
+    }
+    
+    .FirstViewComponent h4 {
+        font-size: 20px;
+    }
+    
+    .ConverterImages {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .ConverterSpecsContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .ConverterSpecs img {
+        width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .Home, .HomeDetails, .ConverterDetails, .ConverterDetailsWithBG, .ConverterImages, .ConverterSpecs {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    .FirstViewComponent p {
+        font-size: 30px;
+    }
+    
+    .FirstViewComponent h4 {
+        font-size: 16px;
+    }
+    
+    .ConverterImages {
+        grid-template-columns: 1fr;
+    }
+    
+    .ConverterSpecsContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .ConverterSpecs img {
+        width: 200px;
+    }
+    
+    .OfferComponent {
+        font-size: large;
+    }
+    
+    .ConverterDetails, .ConverterDetailsWithBG {
+        font-size: medium;
+    }
+}
